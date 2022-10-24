@@ -22,5 +22,5 @@ jobs:
       - name: Build Compose Images
         run: docker-compose build
 
-      - name: Push git-dashboard images to Github registry
+      - name: Push Images
         run: docker-compose push
