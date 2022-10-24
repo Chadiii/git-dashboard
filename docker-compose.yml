@@ -9,8 +9,6 @@ services:
     environment:
       - REDIS_PORT=6379
       - REDIS_HOST=redis
-      - GITHUB_ID=f1487f8457bfdbb2a147
-      - GITHUB_SECRET=2052c20bb99679602aa16f526e13f827353adfcf
     depends_on:
       - redis
 
@@ -19,9 +17,8 @@ services:
       context: client
       dockerfile: ../Dockerfile
     environment:
-      GITHUB_ID: f1487f8457bfdbb2a147
-      GITHUB_SECRET: 2052c20bb99679602aa16f526e13f827353adfcf
       SERVER_API_URL: http://api:3001
+      NEXT_PUBLIC_API_URL: http://92.222.94.73:3001
     ports:
       - "3000:3000"
     depends_on:
