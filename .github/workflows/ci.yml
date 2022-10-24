@@ -22,5 +22,8 @@ jobs:
       - name: Build Compose Images
         run: docker-compose build
 
-      - name: Push image to Container Registry
-        run: docker-compose -verbose push
+      - name: Push git-dashboard images to Github registry
+        run: |
+          docker push ghcr.io/chadiii/git-dashboard_client:latest
+          docker push ghcr.io/chadiii/git-dashboard_api:latest
+          docker push ghcr.io/chadiii/git-dashboard_queue_admin:latest
