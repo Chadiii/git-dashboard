@@ -19,7 +19,7 @@ services:
       dockerfile: ../Dockerfile
     image: ghcr.io/chadiii/git-dashboard_client:latest
     environment:
-      SERVER_API_URL: http://92.222.94.73:3001
+      SERVER_API_URL: http://api:3001
       NEXT_PUBLIC_API_URL: http://92.222.94.73:3001
     ports:
       - "3000:3000"
